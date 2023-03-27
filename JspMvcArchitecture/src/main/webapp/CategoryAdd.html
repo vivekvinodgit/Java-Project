@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+		body {
+				background-image: url('images/background.jpg');
+				background-size: cover;
+   				background-position: center;
+   				background-attachment: fixed;
+    			background-repeat: no-repeat;
+		}
+		h1 {
+			text-align: center;
+			background	: linear-gradient(-135deg, #43c35a, #090e24);
+		}
+	
+	</style>
+<script>  
+
+	function validateform(){  
+			var catName=document.catNew.catName.value;  
+			
+			if(catName.length==0 || catName==null || catName==""){  
+			  	alert("Category Name can't be null");  
+			  	return false;  
+			}
+			
+	}
+			
+</script>
+<meta charset="UTF-8">
+<title>:: New Category ::</title>
+</head>
+<body>
+
+<h1>GoVeg Store</h1>
+	
+	<form name="catNew" method="post" action="CategoryAddAction.jsp" onsubmit="return validateform()">
+		Category Name <input type="text" name="catName"/><br>
+		<input type="submit" value="Save">
+	</form>
+	
+</body>
+</html>
